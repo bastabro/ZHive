@@ -13,13 +13,13 @@ namespace ZHive.WebAPI.EventHandlers
 
     public class ErrorEventArgs : EventArgs
     {
-        public string PlayerUID { get; private set; }
+        public string PlayerID { get; private set; }
         public HttpRequestMessage HttpRequestMessage { get; private set; }
         public Exception Exception { get; private set; }
 
         public ErrorEventArgs(string uid, HttpRequestMessage request, Exception exception)
         {
-            this.PlayerUID = uid;
+            this.PlayerID = uid;
             this.HttpRequestMessage = request;
             this.Exception = exception;
         }
